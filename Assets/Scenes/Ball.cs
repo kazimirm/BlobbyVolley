@@ -10,15 +10,12 @@ public class Ball : MonoBehaviour {
     public GameObject ball1;
     public GameObject ball2;
 
-    public int pocitadloLeft, pocitadloRight;
-
-    Vector3 originalPosLeft;
-    Vector3 originalPosRight;
+    public int counterleft, counterRight;
 
     // Use this for initialization
     void Start () {
-        pocitadloLeft = 0;
-        pocitadloRight = 0;
+        counterleft = 0;
+        counterRight = 0;
     }
 	
 	// Update is called once per frame
@@ -29,7 +26,7 @@ public class Ball : MonoBehaviour {
     public void OnTriggerEnter2D(Collider2D col)
     { 
         //Pad lopty na stranu laveho hraca
-        if (col.tag == "podlahaLeft")
+        if (col.tag == "GroundLeft")
         {
 
             FindObjectOfType<GameManager>().player1fault();
@@ -39,13 +36,13 @@ public class Ball : MonoBehaviour {
             Destroy(GameObject.Find("Ball2(Clone)"));
             ball2 = Instantiate(Ball2) as GameObject;
             Debug.Log("Player1 looses point");
-            pocitadloLeft = 0;
-            pocitadloRight = 0;
+            counterleft = 0;
+            counterRight = 0;
 
         }
 
         //Pad lopty na stranu praveho hraca
-        if (col.tag == "podlahaRight")
+        if (col.tag == "GroundRight")
         {
 
             FindObjectOfType<GameManager>().player2fault();
@@ -55,8 +52,8 @@ public class Ball : MonoBehaviour {
             Destroy(GameObject.Find("Ball2(Clone)"));
             ball1 = Instantiate(Ball1)as GameObject;
             Debug.Log("Player2 looses point");
-            pocitadloLeft = 0;
-            pocitadloRight = 0;
+            counterleft = 0;
+            counterRight = 0;
 
         }
 
@@ -64,7 +61,7 @@ public class Ball : MonoBehaviour {
             //pocitadlo odbiti praveho hraca
             if (col.tag == "BlobbyRight")
             {
-                if (pocitadloRight >= 3)
+                if (counterRight >= 3)
                 {
 
                     FindObjectOfType<GameManager>().player2fault();
@@ -74,19 +71,19 @@ public class Ball : MonoBehaviour {
                     Destroy(GameObject.Find("Ball2(Clone)"));
                     ball1 = Instantiate(Ball1) as GameObject;
                     Debug.Log("Player2 looses point");
-                    pocitadloLeft = 0;
-                    pocitadloRight = 0;
+                    counterleft = 0;
+                    counterRight = 0;
 
                 }
-                pocitadloRight += 1;
-                pocitadloLeft = 0;
+                counterRight += 1;
+                counterleft = 0;
                 
             }
 
             //pocitadlo odbiti laveho hraca
             if (col.tag == "BlobbyLeft")
             {
-                if (pocitadloLeft >= 3)
+                if (counterleft >= 3)
                 {
 
                     FindObjectOfType<GameManager>().player1fault();
@@ -96,12 +93,12 @@ public class Ball : MonoBehaviour {
                     Destroy(GameObject.Find("Ball2(Clone)"));
                     ball2 = Instantiate(Ball2) as GameObject;
                     Debug.Log("Player1 looses point");
-                    pocitadloLeft = 0;
-                    pocitadloRight = 0;
+                    counterleft = 0;
+                    counterRight = 0;
 
                 }
-                pocitadloLeft += 1;
-                pocitadloRight = 0;
+                counterleft += 1;
+                counterRight = 0;
 
             }
         }
