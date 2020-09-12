@@ -57,7 +57,7 @@ public class NewBlobby : MonoBehaviour {
     public void OnTriggerEnter2D(Collider2D col)
     {
         
-        if (col.tag == "Ball2" || col.tag == "Ball1")
+        if (col.tag == "Ball1" || col.tag == "Ball2")
         {
             BlopSound.Play();
         }

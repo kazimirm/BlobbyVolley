@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 
 
-public class Restart : MonoBehaviour{
+public class Menu : MonoBehaviour{
 
     public AudioSource buttonhit;
     public GameObject uvod;
@@ -12,14 +12,14 @@ public class Restart : MonoBehaviour{
     public GameObject restart;
 
 
-    public void QuitGame()
+    public void quitGame()
     {
         buttonhit.Play();
         Application.Quit();
-        Debug.Log("Game is exiting");
+        Debug.Log("Game is exiting with exit status 0");
 
     }
-    public void RestartGame()
+    public void restartGame()
     {
         buttonhit.Play();
         PlayerPrefs.DeleteAll();
@@ -31,7 +31,7 @@ public class Restart : MonoBehaviour{
 
 
     }
-    public void StarttGame()
+    public void startGame()
     {
         buttonhit.Play();
         //PlayerPrefs.DeleteAll();
@@ -42,7 +42,7 @@ public class Restart : MonoBehaviour{
         restart.SetActive(true);
 
     }
-    public void info()
+    public void showInfo()
     {
         buttonhit.Play();
         uvod.SetActive(true);
@@ -51,7 +51,7 @@ public class Restart : MonoBehaviour{
         restart.SetActive(false);
 
     }
-    public void ZavriVysvetlivky()
+    public void closeInfo()
     {
         buttonhit.Play();
         uvod.SetActive(true);
@@ -60,7 +60,7 @@ public class Restart : MonoBehaviour{
         restart.SetActive(false);
 
     }
-    public void koniechry()
+    public void endGame()
     {
         buttonhit.Play();
         uvod.SetActive(true);
