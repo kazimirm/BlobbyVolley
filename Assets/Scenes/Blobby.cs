@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBlobby : MonoBehaviour {
+public class Blobby : MonoBehaviour {
     public float moveSpeed;
     public float jumpForce;
 
