@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4be9fe2c8699b86498be7fb63063e339
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Ball1: {fileID: 1862835457642678, guid: c3ce77203483845439cdbf240ad49f3c, type: 2}
+  - Ball2: {fileID: 1607308555721484, guid: 12e68d7c58f833148a04963eb9efabee, type: 2}
+  - lopta: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
