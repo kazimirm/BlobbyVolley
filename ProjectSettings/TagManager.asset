@@ -12,6 +12,8 @@ TagManager:
   - BlobbyRight
   - Ball2
   - Ball1
+  - GroundLeft
+  - GroundRight
   layers:
   - Default
   - TransparentFX
