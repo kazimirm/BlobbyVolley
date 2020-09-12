@@ -26,8 +26,11 @@ public class NewBlobby : MonoBehaviour {
 
 	}
 
-    // Update is called once per frame
-    //Pohyb hracov
+    /* 
+     * Update is called once per frame
+     * Players movement is handled here
+     * 
+     */
     void Update() {
         
         isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, whatIsGround);
@@ -50,15 +53,11 @@ public class NewBlobby : MonoBehaviour {
         }
     }
 
-    //zvuk odrazu lopty od hracov
+    //Sound effect of hitting the ball when collision with player occurs
     public void OnTriggerEnter2D(Collider2D col)
     {
         
-        if (col.tag == "Ball2")
-        {
-            BlopSound.Play();
-        }
-        if (col.tag == "Ball1")
+        if (col.tag == "Ball2" || col.tag == "Ball1")
         {
             BlopSound.Play();
         }
