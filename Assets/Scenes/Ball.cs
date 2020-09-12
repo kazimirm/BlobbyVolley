@@ -7,8 +7,6 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     public const int MAX_HITS = 3;
-
-
     public int counterLeft, counterRight;
 
     /* 
@@ -26,6 +24,9 @@ public class Ball : MonoBehaviour
 
     }
 
+    /* 
+     * Handles all the collisions between ball - players and ground
+     */
     public void OnTriggerEnter2D(Collider2D col)
     {
         /*
@@ -35,7 +36,7 @@ public class Ball : MonoBehaviour
         GameObject Ball1 = Resources.Load("Ball1") as GameObject;
         GameObject Ball2 = Resources.Load("Ball2") as GameObject;
         
-        //Ball collision with ground on the left site (player1's fault)
+        //Ball collision with ground on the left side (player1's fault)
         if (col.tag == "GroundLeft")
         {
 
@@ -43,13 +44,13 @@ public class Ball : MonoBehaviour
             Destroy(GameObject.Find("Ball1(Clone)"));
             Destroy(GameObject.Find("Ball2(Clone)"));
             GameObject ball2 = Instantiate(Ball2) as GameObject;
-            Debug.Log("Player1 looses point");
+            Debug.Log("Player1 looses a point after ground hit");
             counterLeft = 0;
             counterRight = 0;
 
         }
 
-        //Ball collision with ground on the right site (player2's fault)
+        //Ball collision with ground on the right side (player2's fault)
         if (col.tag == "GroundRight")
         {
 
@@ -57,14 +58,14 @@ public class Ball : MonoBehaviour
             Destroy(GameObject.Find("Ball1(Clone)"));
             Destroy(GameObject.Find("Ball2(Clone)"));
             GameObject ball1 = Instantiate(Ball1) as GameObject;
-            Debug.Log("Player2 looses point");
+            Debug.Log("Player2 looses a point after ground hit");
             counterLeft = 0;
             counterRight = 0;
 
         }
 
         {
-            //pocitadlo odbiti praveho hraca
+            //Hit counter for right player (player 2)
             if (col.tag == "BlobbyRight")
             {
                 if (counterRight >= MAX_HITS)
@@ -74,7 +75,7 @@ public class Ball : MonoBehaviour
                     Destroy(GameObject.Find("Ball1(Clone)"));
                     Destroy(GameObject.Find("Ball2(Clone)"));
                     GameObject ball1 = Instantiate(Ball1) as GameObject;
-                    Debug.Log("Player2 looses point");
+                    Debug.Log("Player2 looses a point");
                     counterLeft = 0;
                     counterRight = 0;
 
@@ -84,7 +85,7 @@ public class Ball : MonoBehaviour
 
             }
 
-            //pocitadlo odbiti laveho hraca
+            //Hit counter for left player (player 1)
             if (col.tag == "BlobbyLeft")
             {
                 if (counterLeft >= MAX_HITS)

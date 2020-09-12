@@ -15,7 +15,7 @@ public class zem : MonoBehaviour {
 	}
     void OnTriggerEnter2D(Collider2D col)
     {
-      Debug.Log(gameObject.name + "bum");
+      Debug.Log(gameObject.name + "collided with a ground");
     }
 
 
