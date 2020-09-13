@@ -323,7 +323,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 91199049}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &64663214
 GameObject:
@@ -450,7 +450,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 91199049}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!850595691 &77423085
 LightingSettings:
@@ -540,7 +540,6 @@ Transform:
   m_LocalPosition: {x: 5.3982534, y: -0.556161, z: -0.81905967}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1917181852}
   - {fileID: 1461300070}
   - {fileID: 963068600}
   - {fileID: 919451465}
@@ -694,7 +693,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.675, y: -120}
+  m_AnchoredPosition: {x: 4.675, y: -50}
   m_SizeDelta: {x: 400, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &101429094
@@ -706,14 +705,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 101429092}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8a17fbff235f244ea68414c080e063d, type: 3}
+  m_Script: {fileID: 11500000, guid: 4543d83cccb9dc1499617556b38bf17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonhit: {fileID: 919451464}
-  uvod: {fileID: 1724526463}
-  informacie: {fileID: 496784758}
-  pauza: {fileID: 1722863245}
-  restart: {fileID: 567682713}
+  buttonHit: {fileID: 919451464}
+  menuScreen: {fileID: 1724526463}
+  infoScreen: {fileID: 496784758}
+  pauseButton: {fileID: 1722863245}
+  restartButton: {fileID: 567682713}
 --- !u!114 &101429095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1104,11 +1103,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8a17fbff235f244ea68414c080e063d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonhit: {fileID: 919451464}
-  uvod: {fileID: 1724526463}
-  informacie: {fileID: 496784758}
-  pauza: {fileID: 1722863245}
-  restart: {fileID: 567682713}
 --- !u!114 &243738548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1327,14 +1321,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 352276157}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8a17fbff235f244ea68414c080e063d, type: 3}
+  m_Script: {fileID: 11500000, guid: 4543d83cccb9dc1499617556b38bf17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonhit: {fileID: 919451464}
-  uvod: {fileID: 1724526463}
-  informacie: {fileID: 496784758}
-  pauza: {fileID: 1722863245}
-  restart: {fileID: 567682713}
+  buttonHit: {fileID: 919451464}
+  menuScreen: {fileID: 1724526463}
+  infoScreen: {fileID: 496784758}
+  pauseButton: {fileID: 1722863245}
+  restartButton: {fileID: 567682713}
 --- !u!114 &352276160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1379,8 +1373,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 352276159}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: StarttGame
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: showGameScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1672,7 +1666,7 @@ GameObject:
   - component: {fileID: 496784761}
   - component: {fileID: 496784760}
   m_Layer: 15
-  m_Name: informacie
+  m_Name: infoScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1923,7 +1917,7 @@ GameObject:
   - component: {fileID: 567682716}
   - component: {fileID: 567682715}
   m_Layer: 5
-  m_Name: restart
+  m_Name: RestartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1958,14 +1952,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 567682713}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8a17fbff235f244ea68414c080e063d, type: 3}
+  m_Script: {fileID: 11500000, guid: 4543d83cccb9dc1499617556b38bf17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonhit: {fileID: 919451464}
-  uvod: {fileID: 1724526463}
-  informacie: {fileID: 496784758}
-  pauza: {fileID: 1722863245}
-  restart: {fileID: 567682713}
+  buttonHit: {fileID: 919451464}
+  menuScreen: {fileID: 1724526463}
+  infoScreen: {fileID: 496784758}
+  pauseButton: {fileID: 1722863245}
+  restartButton: {fileID: 567682713}
 --- !u!114 &567682716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2010,8 +2004,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 567682715}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: RestartGame
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: restartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2279,7 +2273,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Re\u0161tart"
+  m_Text: Restart
 --- !u!222 &709070666
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3525,7 +3519,7 @@ GameObject:
   - component: {fileID: 919451465}
   - component: {fileID: 919451464}
   m_Layer: 0
-  m_Name: buttonhit
+  m_Name: buttonHit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3639,7 +3633,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 91199049}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963068598
 GameObject:
@@ -3766,7 +3760,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 91199049}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &970776230
 GameObject:
@@ -4146,7 +4140,7 @@ GameObject:
   - component: {fileID: 1288949783}
   - component: {fileID: 1288949782}
   m_Layer: 0
-  m_Name: smallapplaus
+  m_Name: smallApplaus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4260,7 +4254,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 91199049}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1355630984
 GameObject:
@@ -4660,7 +4654,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 91199049}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1461704493
 GameObject:
@@ -4746,8 +4740,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1461704498}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: ZavriVysvetlivky
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: closeInfoScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4804,14 +4798,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1461704493}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8a17fbff235f244ea68414c080e063d, type: 3}
+  m_Script: {fileID: 11500000, guid: 4543d83cccb9dc1499617556b38bf17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonhit: {fileID: 919451464}
-  uvod: {fileID: 1724526463}
-  informacie: {fileID: 496784758}
-  pauza: {fileID: 1722863245}
-  restart: {fileID: 567682713}
+  buttonHit: {fileID: 919451464}
+  menuScreen: {fileID: 1724526463}
+  infoScreen: {fileID: 496784758}
+  pauseButton: {fileID: 1722863245}
+  restartButton: {fileID: 567682713}
 --- !u!1 &1466544106
 GameObject:
   m_ObjectHideFlags: 0
@@ -5267,7 +5261,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pauza
+  m_Text: Pause
 --- !u!222 &1611049407
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5444,7 +5438,7 @@ GameObject:
   - component: {fileID: 1722863248}
   - component: {fileID: 1722863247}
   m_Layer: 5
-  m_Name: Pauza
+  m_Name: PauseButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5479,14 +5473,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1722863245}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8a17fbff235f244ea68414c080e063d, type: 3}
+  m_Script: {fileID: 11500000, guid: 4543d83cccb9dc1499617556b38bf17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonhit: {fileID: 919451464}
-  uvod: {fileID: 1724526463}
-  informacie: {fileID: 496784758}
-  pauza: {fileID: 1722863245}
-  restart: {fileID: 567682713}
+  buttonHit: {fileID: 919451464}
+  menuScreen: {fileID: 1724526463}
+  infoScreen: {fileID: 496784758}
+  pauseButton: {fileID: 1722863245}
+  restartButton: {fileID: 567682713}
 --- !u!114 &1722863248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5531,8 +5525,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1722863247}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: koniechry
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: pauseGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5593,7 +5587,7 @@ GameObject:
   - component: {fileID: 1724526465}
   - component: {fileID: 1724526467}
   m_Layer: 5
-  m_Name: IntroScreen
+  m_Name: MenuScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5674,11 +5668,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8a17fbff235f244ea68414c080e063d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonhit: {fileID: 919451464}
-  uvod: {fileID: 1724526463}
-  informacie: {fileID: 496784758}
-  pauza: {fileID: 1722863245}
-  restart: {fileID: 567682713}
 --- !u!1 &1735878223
 GameObject:
   m_ObjectHideFlags: 0
@@ -5807,14 +5796,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1756782149}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8a17fbff235f244ea68414c080e063d, type: 3}
+  m_Script: {fileID: 11500000, guid: 4543d83cccb9dc1499617556b38bf17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonhit: {fileID: 919451464}
-  uvod: {fileID: 1724526463}
-  informacie: {fileID: 496784758}
-  pauza: {fileID: 1722863245}
-  restart: {fileID: 567682713}
+  buttonHit: {fileID: 919451464}
+  menuScreen: {fileID: 1724526463}
+  infoScreen: {fileID: 496784758}
+  pauseButton: {fileID: 1722863245}
+  restartButton: {fileID: 567682713}
 --- !u!114 &1756782152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5859,8 +5848,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1756782151}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: info
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: showInfoScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6003,11 +5992,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8a17fbff235f244ea68414c080e063d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonhit: {fileID: 0}
-  uvod: {fileID: 0}
-  informacie: {fileID: 0}
-  pauza: {fileID: 0}
-  restart: {fileID: 0}
 --- !u!1 &1801198820
 GameObject:
   m_ObjectHideFlags: 0
@@ -6133,147 +6117,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 91199049}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1917181849
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1917181852}
-  - component: {fileID: 1917181851}
-  - component: {fileID: 1917181850}
-  m_Layer: 0
-  m_Name: Audio
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1917181850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1917181849}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 109c3f9d6605a664785b6ed78c824838, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!82 &1917181851
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1917181849}
-  m_Enabled: 0
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 0.528
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 1
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!4 &1917181852
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1917181849}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -291.5014, y: 202.5315, z: -655.56165}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 91199049}
-  m_RootOrder: 0
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1951492513
 GameObject:
