@@ -5,69 +5,87 @@ using System.Collections;
 
 public class Menu : MonoBehaviour{
 
-    public AudioSource buttonhit;
-    public GameObject uvod;
-    public GameObject informacie;
-    public GameObject pauza;
-    public GameObject restart;
+    public AudioSource buttonHit;
+    public GameObject menuScreen;
+    public GameObject infoScreen;
+    public GameObject pauseButton;
+    public GameObject restartButton;
 
 
-    public void quitGame()
+    public void quitGameButton()
     {
-        buttonhit.Play();
+        buttonHit.Play();
         Application.Quit();
-        Debug.Log("Game is exiting with exit status 0");
+        Debug.Log("Game is exiting with exit code 0");
 
     }
+
+    public void showInGameButtons() {
+        pauseButton.SetActive(true);
+        restartButton.SetActive(true);
+    }
+
+    public void hideInGameButtons()
+    {
+        pauseButton.SetActive(false);
+        restartButton.SetActive(false);
+    }
+
+    public void showMenuScreen() {
+        buttonHit.Play();
+        hideInGameButtons();
+        menuScreen.SetActive(true);
+        infoScreen.SetActive(false);
+    }
+
+    public void closeMenuScreen() {
+        showGameScreen();
+    }
+
+    public void showInfoScreen() {
+        buttonHit.Play();
+        hideInGameButtons();
+        menuScreen.SetActive(true);
+        infoScreen.SetActive(true);
+    }
+
+    public void closeInfoScreen()
+    {
+        showMenuScreen();
+    }
+
     public void restartGame()
     {
-        buttonhit.Play();
+        buttonHit.Play();
         PlayerPrefs.DeleteAll();
         SceneManager.LoadScene(0);
-        uvod.SetActive(false);
-        informacie.SetActive(false);
-        pauza.SetActive(true);
-        restart.SetActive(false);
+        showGameScreen();
 
+    }
+
+    public void showGameScreen() {
+        buttonHit.Play();
+        showInGameButtons();
+        menuScreen.SetActive(false);
+        infoScreen.SetActive(false);
 
     }
     public void startGame()
     {
-        buttonhit.Play();
-        //PlayerPrefs.DeleteAll();
-        //SceneManager.LoadScene(0);
-        uvod.SetActive(false);
-        informacie.SetActive(false);
-        pauza.SetActive(true);
-        restart.SetActive(true);
+        showGameScreen();
 
     }
-    public void showInfo()
+
+    public void pauseGame()
     {
-        buttonhit.Play();
-        uvod.SetActive(true);
-        pauza.SetActive(false);
-        informacie.SetActive(true);
-        restart.SetActive(false);
+        buttonHit.Play();
+        showMenuScreen();
 
     }
-    public void closeInfo()
-    {
-        buttonhit.Play();
-        uvod.SetActive(true);
-        informacie.SetActive(false);
-        pauza.SetActive(false);
-        restart.SetActive(false);
 
-    }
-    public void endGame()
-    {
-        buttonhit.Play();
-        uvod.SetActive(true);
-        informacie.SetActive(false);
-        pauza.SetActive(false);
-        restart.SetActive(false);
+    public void continueGame() {
 
+        showGameScreen();
     }
 }
 
