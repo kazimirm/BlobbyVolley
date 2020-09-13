@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class zem : MonoBehaviour {
 
+	public static Logger LOGGER;
+
+
 	// Use this for initialization
 	void Start () {
 		

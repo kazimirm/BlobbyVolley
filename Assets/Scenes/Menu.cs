@@ -8,6 +8,7 @@ public class Menu : MonoBehaviour{
     public AudioSource buttonHit;
     public GameObject menuScreen;
     public GameObject infoScreen;
+    public GameObject settingsScreen;
     public GameObject pauseButton;
     public GameObject restartButton;
 
@@ -36,6 +37,7 @@ public class Menu : MonoBehaviour{
         hideInGameButtons();
         menuScreen.SetActive(true);
         infoScreen.SetActive(false);
+        settingsScreen.SetActive(false);
     }
 
     public void closeMenuScreen() {
@@ -47,6 +49,7 @@ public class Menu : MonoBehaviour{
         hideInGameButtons();
         menuScreen.SetActive(true);
         infoScreen.SetActive(true);
+        settingsScreen.SetActive(false);
     }
 
     public void closeInfoScreen()
@@ -68,6 +71,7 @@ public class Menu : MonoBehaviour{
         showInGameButtons();
         menuScreen.SetActive(false);
         infoScreen.SetActive(false);
+        settingsScreen.SetActive(false);
 
     }
     public void startGame()
@@ -86,6 +90,25 @@ public class Menu : MonoBehaviour{
     public void continueGame() {
 
         showGameScreen();
+    }
+
+    public void showSettings() {
+
+        buttonHit.Play();
+        hideInGameButtons();
+        menuScreen.SetActive(true);
+        infoScreen.SetActive(false);
+        settingsScreen.SetActive(true);
+    }
+
+    public void closeSettings()
+    {
+
+        buttonHit.Play();
+        hideInGameButtons();
+        menuScreen.SetActive(true);
+        infoScreen.SetActive(false);
+        settingsScreen.SetActive(false);
     }
 }
 

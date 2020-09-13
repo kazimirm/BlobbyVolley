@@ -75,7 +75,7 @@ public class Ball : MonoBehaviour
                     Destroy(GameObject.Find("Ball1(Clone)"));
                     Destroy(GameObject.Find("Ball2(Clone)"));
                     GameObject ball1 = Instantiate(Ball1) as GameObject;
-                    Debug.Log("Player2 looses a point");
+                    Debug.Log("Player2 looses a point due to MAX_HITS attempts");
                     counterLeft = 0;
                     counterRight = 0;
 
@@ -95,7 +95,7 @@ public class Ball : MonoBehaviour
                     Destroy(GameObject.Find("Ball1(Clone)"));
                     Destroy(GameObject.Find("Ball2(Clone)"));
                     GameObject ball2 = Instantiate(Ball2) as GameObject;
-                    Debug.Log("Player1 looses point");
+                    Debug.Log("Player1 looses point due to MAX_HITS attempts");
                     counterLeft = 0;
                     counterRight = 0;
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Blobby : MonoBehaviour {
+    public static Logger LOGGER;
     public float moveSpeed;
     public float jumpForce;
 
