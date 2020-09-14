@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Blobby : MonoBehaviour {
-    public static Logger LOGGER;
-    public float moveSpeed;
-    public float jumpForce;
+    //public static Logger LOGGER;
+    public float moveSpeed = 5;
+    public float jumpForce = 17;
 
     public KeyCode left;
     public KeyCode right;
@@ -14,7 +14,7 @@ public class Blobby : MonoBehaviour {
     private Rigidbody2D theRB;
 
     public Transform groundCheckPoint;
-    public float groundCheckRadius;
+    public float groundCheckRadius = 0.2F;
     public LayerMask whatIsGround;
 
     public bool isGrounded;
@@ -62,5 +62,19 @@ public class Blobby : MonoBehaviour {
         {
             BlopSound.Play();
         }
+    }
+
+    public void setLeft(KeyCode left) {
+        this.left = left;
+    }
+
+    public void setRight(KeyCode right)
+    {
+        this.right = right;
+    }
+
+    public void setJump(KeyCode jump)
+    {
+        this.jump = jump;
     }
 }

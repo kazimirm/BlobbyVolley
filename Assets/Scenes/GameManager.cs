@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
+    public static GameManager gameManager;
+
     public GameObject player1;
     public GameObject player2;
 
@@ -26,17 +28,46 @@ public class GameManager : MonoBehaviour {
     public AudioSource smallapplaus;
     public AudioSource hit;
 
+    public GameObject blobbyRight;
+    public GameObject blobbyLeft;
 
+    
     // Use this for initialization
     void Start () {
         player1Wins.SetActive(false);
         player2Wins.SetActive(false);
+        blobbyRight = GameObject.FindGameObjectWithTag("BlobbyRight");
+        blobbyLeft = GameObject.FindGameObjectWithTag("BlobbyLeft");
+
+        blobbyRight.GetComponent<Blobby>().left = KeyCode.LeftArrow;
+        blobbyRight.GetComponent<Blobby>().jump = KeyCode.UpArrow;
+        blobbyRight.GetComponent<Blobby>().right = KeyCode.RightArrow;
+
+        blobbyLeft.GetComponent<Blobby>().left = KeyCode.A;
+        blobbyLeft.GetComponent<Blobby>().jump = KeyCode.W;
+        blobbyLeft.GetComponent<Blobby>().right = KeyCode.D;
+    }
+
+    void Awake()
+    {
+        //Singleton pattern
+        if (gameManager == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            gameManager = this;
+        }
+        else if (gameManager != this)
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame
     void Update() {      
        
     }
+
+
     //Odobranie zivota Hracovi 1
     public void player1fault()
     {
