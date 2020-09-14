@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour {
     void Start () {
         player1Wins.SetActive(false);
         player2Wins.SetActive(false);
+
         blobbyRight = GameObject.FindGameObjectWithTag("BlobbyRight");
         blobbyLeft = GameObject.FindGameObjectWithTag("BlobbyLeft");
 

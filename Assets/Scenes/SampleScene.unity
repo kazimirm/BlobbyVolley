@@ -2129,10 +2129,11 @@ MonoBehaviour:
     na druh\xFA stranu sie\u0165ky. Na koho strane lopta spadne na zem, ten hr\xE1\u010D
     strat\xED jeden \u017Eivot. Na za\u010Diatku m\xE1 ka\u017Ed\xFD hr\xE1\u010D
     5 \u017Eivotov. Maxim\xE1lny po\u010Det dotknut\xED sa lopty hr\xE1\u010Dom je
-    3.\r\n\r\nOvl\xE1danie:\r\n\r\nHr\xE1\u010D 1 : \r\nPohyb v\u013Eavo \u2013 \u2018A\u2018\r\nPohyb
-    vpravo \u2013 \u2018D\u2018\r\nV\xFDskok  \u2013 \u2018W\u2018\r\n\r\nHr\xE1\u010D
-    2 : \r\nPohyb v\u013Eavo \u2013 \u0160\xEDpka v\u013Eavo\r\nPohyb vpravo \u2013
-    \u0160\xEDpka vpravo\r\nV\xFDskok  \u2013 \u0160\xEDpka hore\r\n"
+    3.\r\n\r\nDefault Ovl\xE1danie:\r\n\r\nHr\xE1\u010D 1 : \r\nPohyb v\u013Eavo
+    \u2013 \u2018A\u2018\r\nPohyb vpravo \u2013 \u2018D\u2018\r\nV\xFDskok  \u2013
+    \u2018W\u2018\r\n\r\nHr\xE1\u010D 2 : \r\nPohyb v\u013Eavo \u2013 \u0160\xEDpka
+    v\u013Eavo\r\nPohyb vpravo \u2013 \u0160\xEDpka vpravo\r\nV\xFDskok  \u2013 \u0160\xEDpka
+    hore\r\n"
 --- !u!222 &522403314
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4102,7 +4103,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1076368628
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4287,7 +4288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.972549, g: 0.07058824, b: 0.07058824, a: 1}
+  m_Color: {r: 0, g: 0, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5725,7 +5726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9529412, g: 0.34509805, b: 0.7764706, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
