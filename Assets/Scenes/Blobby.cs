@@ -16,7 +16,7 @@ public class Blobby : MonoBehaviour {
     public Transform groundCheckPoint;
     public float groundCheckRadius = 0.2F;
     public LayerMask whatIsGround;
-
+    
     public bool isGrounded;
 
     public AudioSource BlopSound;

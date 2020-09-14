@@ -31,7 +31,10 @@ public class GameManager : MonoBehaviour {
     public GameObject blobbyRight;
     public GameObject blobbyLeft;
 
-    
+    public Color blobbyRightColor = Color.blue;
+    public Color blobbyLeftColor = Color.red;
+
+
     // Use this for initialization
     void Start () {
         player1Wins.SetActive(false);
@@ -42,10 +45,13 @@ public class GameManager : MonoBehaviour {
         blobbyRight.GetComponent<Blobby>().left = KeyCode.LeftArrow;
         blobbyRight.GetComponent<Blobby>().jump = KeyCode.UpArrow;
         blobbyRight.GetComponent<Blobby>().right = KeyCode.RightArrow;
+        blobbyRight.GetComponent<SpriteRenderer>().color = blobbyRightColor;
+;
 
         blobbyLeft.GetComponent<Blobby>().left = KeyCode.A;
         blobbyLeft.GetComponent<Blobby>().jump = KeyCode.W;
         blobbyLeft.GetComponent<Blobby>().right = KeyCode.D;
+        blobbyLeft.GetComponent<SpriteRenderer>().color = blobbyLeftColor;
     }
 
     void Awake()
