@@ -50,6 +50,14 @@ Preset:
     value: 
     objectReference: {fileID: 0}
   - target: {fileID: 0}
+    propertyPath: player1Wins
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: player2Wins
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
     propertyPath: player1LeftControlButton
     value: 
     objectReference: {fileID: 0}
