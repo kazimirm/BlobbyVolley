@@ -3,7 +3,8 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using UnityEngine.UI;
 
-public class Menu : MonoBehaviour{
+public class Menu : MonoBehaviour
+{
 
     public AudioSource buttonHit;
     public GameObject menuScreen;
@@ -15,7 +16,6 @@ public class Menu : MonoBehaviour{
     public GameObject player1LeftControlButton;
     public GameObject player1RightControlButton;
     public GameObject player1JumpControlButton;
-
     public GameObject player2LeftControlButton;
     public GameObject player2RightControlButton;
     public GameObject player2JumpControlButton;
@@ -34,7 +34,8 @@ public class Menu : MonoBehaviour{
 
     }
 
-    public void showInGameButtons() {
+    public void showInGameButtons()
+    {
         pauseButton.SetActive(true);
         restartButton.SetActive(true);
     }
@@ -45,7 +46,8 @@ public class Menu : MonoBehaviour{
         restartButton.SetActive(false);
     }
 
-    public void showMenuScreen() {
+    public void showMenuScreen()
+    {
         buttonHit.Play();
         hideInGameButtons();
         menuScreen.SetActive(true);
@@ -53,11 +55,13 @@ public class Menu : MonoBehaviour{
         settingsScreen.SetActive(false);
     }
 
-    public void closeMenuScreen() {
+    public void closeMenuScreen()
+    {
         showGameScreen();
     }
 
-    public void showInfoScreen() {
+    public void showInfoScreen()
+    {
         buttonHit.Play();
         hideInGameButtons();
         menuScreen.SetActive(true);
@@ -79,7 +83,8 @@ public class Menu : MonoBehaviour{
 
     }
 
-    public void showGameScreen() {
+    public void showGameScreen()
+    {
         buttonHit.Play();
         showInGameButtons();
         menuScreen.SetActive(false);
@@ -100,12 +105,14 @@ public class Menu : MonoBehaviour{
 
     }
 
-    public void continueGame() {
+    public void continueGame()
+    {
 
         showGameScreen();
     }
 
-    public void showSettings() {
+    public void showSettings()
+    {
 
         buttonHit.Play();
         hideInGameButtons();
@@ -124,14 +131,15 @@ public class Menu : MonoBehaviour{
         settingsScreen.SetActive(false);
     }
 
-    public void setKey() {
+    public void setKey()
+    {
         GameObject button1 = GameObject.FindGameObjectWithTag("player1LeftControlButton");
         GameObject blobbyLeft = GameObject.FindGameObjectWithTag("BlobbyLeft");
         button1.GetComponentInChildren<Text>().text = blobbyLeft.GetComponent<Blobby>().left.ToString();
     }
 
 
-    void onGUI()
+    void OnGUI()
     {
         /*keyEvent dictates what key our user presses
 		 * bt using Event.current to detect the current
@@ -156,18 +164,18 @@ public class Menu : MonoBehaviour{
     public void startAssignment(Button button)
     {
         if (!waitingForKey)
-            StartCoroutine(assignKey(button));
+            StartCoroutine(AssignKey(button));
     }
 
     //Assigns buttonText to the text component of
     //the button that was pressed
-    public void sendText(Text text)
+    public void SendText(Text text)
     {
         buttonText = text;
     }
 
     //Used for controlling the flow of our below Coroutine
-    IEnumerator waitForKey()
+    IEnumerator WaitForKey()
     {
         while (!keyEvent.isKey)
             yield return null;
@@ -179,44 +187,43 @@ public class Menu : MonoBehaviour{
 	 * to the new key that the user presses, which is grabbed
 	 * in the OnGUI() function, above.
 	 */
-    public IEnumerator assignKey(Button input)
+    public IEnumerator AssignKey(Button button)
     {
-        string button = input.name;
+        string b = button.name;
         waitingForKey = true;
 
-        yield return waitForKey(); //Executes endlessly until user presses a key
+        yield return WaitForKey(); //Executes endlessly until user presses a key
         GameObject blobbyLeft = GameObject.FindGameObjectWithTag("BlobbyLeft");
         GameObject blobbyright = GameObject.FindGameObjectWithTag("BlobbyRight");
-        switch (button)
+        switch (b)
         {
 
             case "player1LeftControlButton":
                 blobbyLeft.GetComponent<Blobby>().left = newKey;
-                GameObject.Find(button).GetComponentInChildren<Text>().text = newKey.ToString();
+                GameObject.Find(b).GetComponentInChildren<Text>().text = newKey.ToString();
                 break;
-            case "player1UpControlButton":
+            case "player1JumpControlButton":
                 blobbyLeft.GetComponent<Blobby>().jump = newKey;
-                GameObject.Find(button).GetComponentInChildren<Text>().text = newKey.ToString();
+                GameObject.Find(b).GetComponentInChildren<Text>().text = newKey.ToString();
                 break;
             case "player1RightControlButton":
                 blobbyLeft.GetComponent<Blobby>().right = newKey;
-                GameObject.Find(button).GetComponentInChildren<Text>().text = newKey.ToString();
+                GameObject.Find(b).GetComponentInChildren<Text>().text = newKey.ToString();
                 break;
             case "player2LeftControlButton":
                 blobbyright.GetComponent<Blobby>().left = newKey;
-                GameObject.Find(button).GetComponentInChildren<Text>().text = newKey.ToString();
+                GameObject.Find(b).GetComponentInChildren<Text>().text = newKey.ToString();
                 break;
-            case "player2UpControlButton":
+            case "player2JumpControlButton":
                 blobbyright.GetComponent<Blobby>().jump = newKey;
-                GameObject.Find(button).GetComponentInChildren<Text>().text = newKey.ToString();
+                GameObject.Find(b).GetComponentInChildren<Text>().text = newKey.ToString();
                 break;
             case "player2RightControlButton":
                 blobbyright.GetComponent<Blobby>().right = newKey;
-                GameObject.Find(button).GetComponentInChildren<Text>().text = newKey.ToString();
+                GameObject.Find(b).GetComponentInChildren<Text>().text = newKey.ToString();
                 break;
         }
 
         yield return null;
     }
 }
-

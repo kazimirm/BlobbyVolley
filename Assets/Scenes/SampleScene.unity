@@ -872,7 +872,7 @@ MonoBehaviour:
   settingsScreen: {fileID: 1076368627}
   pauseButton: {fileID: 1722863245}
   restartButton: {fileID: 567682713}
-  player1LeftControlButton: {fileID: 0}
+  player1LeftControlButton: {fileID: 378634623}
   player1RightControlButton: {fileID: 0}
   player1JumpControlButton: {fileID: 0}
   player2LeftControlButton: {fileID: 0}
@@ -1007,7 +1007,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1076368628}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1250,7 +1250,7 @@ RectTransform:
   - {fileID: 1714781477}
   - {fileID: 84388271}
   m_Father: {fileID: 1076368628}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1275,8 +1275,8 @@ MonoBehaviour:
   settingsScreen: {fileID: 1076368627}
   pauseButton: {fileID: 1722863245}
   restartButton: {fileID: 567682713}
-  player1LeftControlButton: {fileID: 0}
-  player1RightControlButton: {fileID: 163444617}
+  player1LeftControlButton: {fileID: 378634623}
+  player1RightControlButton: {fileID: 0}
   player1JumpControlButton: {fileID: 0}
   player2LeftControlButton: {fileID: 0}
   player2RightControlButton: {fileID: 0}
@@ -1511,7 +1511,7 @@ MonoBehaviour:
   settingsScreen: {fileID: 1076368627}
   pauseButton: {fileID: 1722863245}
   restartButton: {fileID: 567682713}
-  player1LeftControlButton: {fileID: 0}
+  player1LeftControlButton: {fileID: 378634623}
   player1RightControlButton: {fileID: 0}
   player1JumpControlButton: {fileID: 0}
   player2LeftControlButton: {fileID: 0}
@@ -1660,7 +1660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1669,7 +1669,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1680,7 +1680,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: aaa
 --- !u!222 &247291305
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1798,7 +1798,7 @@ RectTransform:
   m_Children:
   - {fileID: 444589456}
   m_Father: {fileID: 1076368628}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1819,11 +1819,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonHit: {fileID: 919451464}
   menuScreen: {fileID: 1724526463}
-  infoScreen: {fileID: 1076368627}
+  infoScreen: {fileID: 496784758}
   settingsScreen: {fileID: 1076368627}
   pauseButton: {fileID: 1722863245}
   restartButton: {fileID: 567682713}
-  player1LeftControlButton: {fileID: 0}
+  player1LeftControlButton: {fileID: 378634623}
   player1RightControlButton: {fileID: 0}
   player1JumpControlButton: {fileID: 0}
   player2LeftControlButton: {fileID: 0}
@@ -1972,7 +1972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1981,7 +1981,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1992,7 +1992,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: aaa
 --- !u!222 &343406997
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2059,7 +2059,7 @@ MonoBehaviour:
   settingsScreen: {fileID: 1076368627}
   pauseButton: {fileID: 1722863245}
   restartButton: {fileID: 567682713}
-  player1LeftControlButton: {fileID: 0}
+  player1LeftControlButton: {fileID: 378634623}
   player1RightControlButton: {fileID: 0}
   player1JumpControlButton: {fileID: 0}
   player2LeftControlButton: {fileID: 0}
@@ -2274,7 +2274,7 @@ RectTransform:
   - {fileID: 1267201564}
   - {fileID: 63737219}
   m_Father: {fileID: 1076368628}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2359,7 +2359,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &378634627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2686,10 +2686,10 @@ MonoBehaviour:
   settingsScreen: {fileID: 1076368627}
   pauseButton: {fileID: 1722863245}
   restartButton: {fileID: 567682713}
-  player1LeftControlButton: {fileID: 0}
+  player1LeftControlButton: {fileID: 378634623}
   player1RightControlButton: {fileID: 0}
   player1JumpControlButton: {fileID: 0}
-  player2LeftControlButton: {fileID: 494344155}
+  player2LeftControlButton: {fileID: 0}
   player2RightControlButton: {fileID: 0}
   player2JumpControlButton: {fileID: 0}
 --- !u!114 &494344158
@@ -4530,7 +4530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4539,7 +4539,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -4550,7 +4550,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: aaa
 --- !u!222 &829994497
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5160,7 +5160,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1076368628
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5173,12 +5173,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1760501899}
-  - {fileID: 337183990}
   - {fileID: 115719389}
+  - {fileID: 1909064774}
+  - {fileID: 337183990}
   - {fileID: 378634624}
   - {fileID: 1440308723}
   - {fileID: 163444618}
-  - {fileID: 1909064774}
   - {fileID: 494344156}
   - {fileID: 1727304296}
   - {fileID: 2099247407}
@@ -5645,7 +5645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5665,7 +5665,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: aaa
 --- !u!222 &1267201566
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6108,7 +6108,7 @@ RectTransform:
   - {fileID: 343406995}
   - {fileID: 939773292}
   m_Father: {fileID: 1076368628}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6133,9 +6133,9 @@ MonoBehaviour:
   settingsScreen: {fileID: 1076368627}
   pauseButton: {fileID: 1722863245}
   restartButton: {fileID: 567682713}
-  player1LeftControlButton: {fileID: 0}
+  player1LeftControlButton: {fileID: 378634623}
   player1RightControlButton: {fileID: 0}
-  player1JumpControlButton: {fileID: 1440308722}
+  player1JumpControlButton: {fileID: 0}
   player2LeftControlButton: {fileID: 0}
   player2RightControlButton: {fileID: 0}
   player2JumpControlButton: {fileID: 0}
@@ -6510,7 +6510,7 @@ MonoBehaviour:
   settingsScreen: {fileID: 1076368627}
   pauseButton: {fileID: 1722863245}
   restartButton: {fileID: 567682713}
-  player1LeftControlButton: {fileID: 0}
+  player1LeftControlButton: {fileID: 378634623}
   player1RightControlButton: {fileID: 0}
   player1JumpControlButton: {fileID: 0}
   player2LeftControlButton: {fileID: 0}
@@ -6726,7 +6726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6746,7 +6746,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: aaa
 --- !u!222 &1481265083
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7346,7 +7346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7355,7 +7355,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -7366,7 +7366,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: aaa
 --- !u!222 &1714781479
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7698,12 +7698,12 @@ MonoBehaviour:
   settingsScreen: {fileID: 1076368627}
   pauseButton: {fileID: 1722863245}
   restartButton: {fileID: 567682713}
-  player1LeftControlButton: {fileID: 0}
+  player1LeftControlButton: {fileID: 378634623}
   player1RightControlButton: {fileID: 0}
   player1JumpControlButton: {fileID: 0}
   player2LeftControlButton: {fileID: 0}
   player2RightControlButton: {fileID: 0}
-  player2JumpControlButton: {fileID: 1727304295}
+  player2JumpControlButton: {fileID: 0}
 --- !u!114 &1727304298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7934,7 +7934,7 @@ MonoBehaviour:
   settingsScreen: {fileID: 1076368627}
   pauseButton: {fileID: 1722863245}
   restartButton: {fileID: 567682713}
-  player1LeftControlButton: {fileID: 0}
+  player1LeftControlButton: {fileID: 378634623}
   player1RightControlButton: {fileID: 0}
   player1JumpControlButton: {fileID: 0}
   player2LeftControlButton: {fileID: 0}
@@ -8364,7 +8364,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1076368628}
-  m_RootOrder: 6
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8702,11 +8702,11 @@ MonoBehaviour:
   settingsScreen: {fileID: 1076368627}
   pauseButton: {fileID: 1722863245}
   restartButton: {fileID: 567682713}
-  player1LeftControlButton: {fileID: 0}
+  player1LeftControlButton: {fileID: 378634623}
   player1RightControlButton: {fileID: 0}
   player1JumpControlButton: {fileID: 0}
   player2LeftControlButton: {fileID: 0}
-  player2RightControlButton: {fileID: 2099247406}
+  player2RightControlButton: {fileID: 0}
   player2JumpControlButton: {fileID: 0}
 --- !u!114 &2099247409
 MonoBehaviour:
@@ -8762,7 +8762,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &2099247410
 MonoBehaviour:
   m_ObjectHideFlags: 0

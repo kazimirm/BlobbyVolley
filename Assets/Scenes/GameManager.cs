@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour {
         blobbyLeft.GetComponent<Blobby>().left = KeyCode.A;
         blobbyLeft.GetComponent<Blobby>().jump = KeyCode.W;
         blobbyLeft.GetComponent<Blobby>().right = KeyCode.D;
-        GameObject button1 = GameObject.FindGameObjectWithTag("player1LeftControlButton");
+        //GameObject button1 = GameObject.FindGameObjectWithTag("player1LeftControlButton");
         //Button button2 = GameObject.Find("player1UpControlButton").GetComponent<Button>();
         //Button button3 = GameObject.Find("player1RightControlButton").GetComponent<Button>();
         //button1.GetComponentInChildren<Text>().text = blobbyLeft.GetComponent<Blobby>().left.ToString();
