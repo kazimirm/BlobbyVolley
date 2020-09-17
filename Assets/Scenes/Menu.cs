@@ -11,7 +11,14 @@ public class Menu : MonoBehaviour{
     public GameObject settingsScreen;
     public GameObject pauseButton;
     public GameObject restartButton;
+
     public GameObject player1LeftControlButton;
+    public GameObject player1RightControlButton;
+    public GameObject player1JumpControlButton;
+
+    public GameObject player2LeftControlButton;
+    public GameObject player2RightControlButton;
+    public GameObject player2JumpControlButton;
 
 
     Event keyEvent;
@@ -124,7 +131,7 @@ public class Menu : MonoBehaviour{
     }
 
 
-    void OnGUI()
+    void onGUI()
     {
         /*keyEvent dictates what key our user presses
 		 * bt using Event.current to detect the current
@@ -149,18 +156,18 @@ public class Menu : MonoBehaviour{
     public void startAssignment(Button button)
     {
         if (!waitingForKey)
-            StartCoroutine(AssignKey(button));
+            StartCoroutine(assignKey(button));
     }
 
     //Assigns buttonText to the text component of
     //the button that was pressed
-    public void SendText(Text text)
+    public void sendText(Text text)
     {
         buttonText = text;
     }
 
     //Used for controlling the flow of our below Coroutine
-    IEnumerator WaitForKey()
+    IEnumerator waitForKey()
     {
         while (!keyEvent.isKey)
             yield return null;
@@ -172,27 +179,40 @@ public class Menu : MonoBehaviour{
 	 * to the new key that the user presses, which is grabbed
 	 * in the OnGUI() function, above.
 	 */
-    public IEnumerator AssignKey(Button button)
+    public IEnumerator assignKey(Button input)
     {
-        string b = button.name;
+        string button = input.name;
         waitingForKey = true;
 
-        yield return WaitForKey(); //Executes endlessly until user presses a key
+        yield return waitForKey(); //Executes endlessly until user presses a key
         GameObject blobbyLeft = GameObject.FindGameObjectWithTag("BlobbyLeft");
-        switch (b)
+        GameObject blobbyright = GameObject.FindGameObjectWithTag("BlobbyRight");
+        switch (button)
         {
 
             case "player1LeftControlButton":
                 blobbyLeft.GetComponent<Blobby>().left = newKey;
-                GameObject.Find(b).GetComponentInChildren<Text>().text = newKey.ToString();
+                GameObject.Find(button).GetComponentInChildren<Text>().text = newKey.ToString();
                 break;
             case "player1UpControlButton":
                 blobbyLeft.GetComponent<Blobby>().jump = newKey;
-                GameObject.Find(b).GetComponentInChildren<Text>().text = newKey.ToString();
+                GameObject.Find(button).GetComponentInChildren<Text>().text = newKey.ToString();
                 break;
             case "player1RightControlButton":
                 blobbyLeft.GetComponent<Blobby>().right = newKey;
-                GameObject.Find(b).GetComponentInChildren<Text>().text = newKey.ToString();
+                GameObject.Find(button).GetComponentInChildren<Text>().text = newKey.ToString();
+                break;
+            case "player2LeftControlButton":
+                blobbyright.GetComponent<Blobby>().left = newKey;
+                GameObject.Find(button).GetComponentInChildren<Text>().text = newKey.ToString();
+                break;
+            case "player2UpControlButton":
+                blobbyright.GetComponent<Blobby>().jump = newKey;
+                GameObject.Find(button).GetComponentInChildren<Text>().text = newKey.ToString();
+                break;
+            case "player2RightControlButton":
+                blobbyright.GetComponent<Blobby>().right = newKey;
+                GameObject.Find(button).GetComponentInChildren<Text>().text = newKey.ToString();
                 break;
         }
 
