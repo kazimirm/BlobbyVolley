@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour {
     }
 
 
-    //Odobranie zivota Hracovi 1
+    //Method for taking a player's 1 life
     public void player1fault()
     {
         Player1Life -= 1;
@@ -101,10 +101,11 @@ public class GameManager : MonoBehaviour {
             win.Play();
             player1.SetActive(false);
             player2Wins.SetActive(true);
+            Debug.Log("Player2 wins");
         }
 
     }
-    //Odobranie zivota Hracovi 2
+    //Method for taking a player's 2 life
     public void player2fault()
     {
         Player2Life -= 1;
@@ -124,22 +125,12 @@ public class GameManager : MonoBehaviour {
             win.Play();
             player2.SetActive(false);
             player1Wins.SetActive(true);
+            Debug.Log("Player1 wins");
         }
         whistleSound.Play();
         smallapplaus.Play();
         hit.Play();
 
-    }
-
-    void OnTriggerEnter(Collider col)
-    {  
-        //Ak padne lopta na stranu hraca 1, je to chyba hraca 1.
-        player1fault();
-        Debug.Log(gameObject.name + "bum");
-
-        //Ak padne lopta na stranu hraca 2, je to chyba hraca 2.
-        player2fault();
-        Debug.Log(gameObject.name + "bum");     
     }
 
 }

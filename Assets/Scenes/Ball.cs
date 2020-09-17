@@ -7,7 +7,8 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     public const int MAX_HITS = 3;
-    public int counterLeft, counterRight;
+    public int counterLeft;
+    public int counterRight;
 
     /* 
      * Initialization method which is called on start

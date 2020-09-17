@@ -86,6 +86,8 @@ public class Menu : MonoBehaviour
         buttonHit.Play();
         PlayerPrefs.DeleteAll();
         SceneManager.LoadScene(0);
+        player1Wins.SetActive(false);
+        player2Wins.SetActive(false);
         showGameScreen();
 
     }

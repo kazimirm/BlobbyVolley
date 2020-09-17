@@ -3134,14 +3134,14 @@ MonoBehaviour:
   settingsScreen: {fileID: 1076368627}
   pauseButton: {fileID: 1722863245}
   restartButton: {fileID: 567682713}
-  player1Wins: {fileID: 0}
-  player2Wins: {fileID: 0}
-  player1LeftControlButton: {fileID: 0}
-  player1RightControlButton: {fileID: 0}
-  player1JumpControlButton: {fileID: 0}
-  player2LeftControlButton: {fileID: 0}
-  player2RightControlButton: {fileID: 0}
-  player2JumpControlButton: {fileID: 0}
+  player1Wins: {fileID: 293298123}
+  player2Wins: {fileID: 2044304182}
+  player1LeftControlButton: {fileID: 378634623}
+  player1RightControlButton: {fileID: 163444617}
+  player1JumpControlButton: {fileID: 1440308722}
+  player2LeftControlButton: {fileID: 494344155}
+  player2RightControlButton: {fileID: 2099247406}
+  player2JumpControlButton: {fileID: 1727304295}
 --- !u!114 &567682716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7507,14 +7507,14 @@ MonoBehaviour:
   settingsScreen: {fileID: 1076368627}
   pauseButton: {fileID: 1722863245}
   restartButton: {fileID: 567682713}
-  player1Wins: {fileID: 0}
-  player2Wins: {fileID: 0}
-  player1LeftControlButton: {fileID: 0}
-  player1RightControlButton: {fileID: 0}
-  player1JumpControlButton: {fileID: 0}
-  player2LeftControlButton: {fileID: 0}
-  player2RightControlButton: {fileID: 0}
-  player2JumpControlButton: {fileID: 0}
+  player1Wins: {fileID: 293298123}
+  player2Wins: {fileID: 2044304182}
+  player1LeftControlButton: {fileID: 378634623}
+  player1RightControlButton: {fileID: 163444617}
+  player1JumpControlButton: {fileID: 1440308722}
+  player2LeftControlButton: {fileID: 494344155}
+  player2RightControlButton: {fileID: 2099247406}
+  player2JumpControlButton: {fileID: 1727304295}
 --- !u!114 &1722863248
 MonoBehaviour:
   m_ObjectHideFlags: 0
