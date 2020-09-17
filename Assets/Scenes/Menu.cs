@@ -90,6 +90,7 @@ public class Menu : MonoBehaviour
         player2Wins.SetActive(false);
         showGameScreen();
 
+
     }
 
     public void showGameScreen()
@@ -226,4 +227,5 @@ public class Menu : MonoBehaviour
 
         yield return null;
     }
+
 }

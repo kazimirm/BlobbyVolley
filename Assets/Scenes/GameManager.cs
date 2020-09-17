@@ -46,29 +46,62 @@ public class GameManager : MonoBehaviour {
         blobbyRight = GameObject.FindGameObjectWithTag("BlobbyRight");
         blobbyLeft = GameObject.FindGameObjectWithTag("BlobbyLeft");
 
-        blobbyRight.GetComponent<Blobby>().left = KeyCode.LeftArrow;
-        blobbyRight.GetComponent<Blobby>().jump = KeyCode.UpArrow;
-        blobbyRight.GetComponent<Blobby>().right = KeyCode.RightArrow;
+        blobbyRight.GetComponent<Blobby>().left = (KeyCode)System.Enum.Parse(typeof(KeyCode), GetLine("player2LeftControlButton"));
+        blobbyRight.GetComponent<Blobby>().jump = (KeyCode)System.Enum.Parse(typeof(KeyCode), GetLine("player2JumpControlButton"));
+        blobbyRight.GetComponent<Blobby>().right = (KeyCode)System.Enum.Parse(typeof(KeyCode), GetLine("player2RightControlButton"));
         blobbyRight.GetComponent<SpriteRenderer>().color = blobbyRightColor;
-;
-        blobbyLeft.GetComponent<Blobby>().left = KeyCode.A;
-        blobbyLeft.GetComponent<Blobby>().jump = KeyCode.W;
-        blobbyLeft.GetComponent<Blobby>().right = KeyCode.D;
+
+        blobbyLeft.GetComponent<Blobby>().left = (KeyCode)System.Enum.Parse(typeof(KeyCode), GetLine("player1LeftControlButton"));
+        blobbyLeft.GetComponent<Blobby>().jump = (KeyCode)System.Enum.Parse(typeof(KeyCode), GetLine("player1JumpControlButton"));
+        blobbyLeft.GetComponent<Blobby>().right = (KeyCode)System.Enum.Parse(typeof(KeyCode), GetLine("player1RightControlButton"));
         blobbyLeft.GetComponent<SpriteRenderer>().color = blobbyLeftColor;
+        
+    }
+
+    public string[] GetLines(string id)
+    {
+        Debug.Log("ID of line: " + id);
+        ArrayList lines = new ArrayList();
+        string line;
+        TextAsset textFile = (TextAsset)Resources.Load("English", typeof(TextAsset));
+        System.IO.StringReader textStream = new System.IO.StringReader(textFile.text);
+        string lineID = "[" + id + "]";
+        bool match = false;
+        while ((line = textStream.ReadLine()) != null)
+        {
+            if (match)
+            {
+                if (line.StartsWith("["))
+                {
+                    break;
+                }
+                if (line.Length > 0)
+                {
+                    Debug.Log("Read line: " + line);
+                    lines.Add(line);
+                }
+            }
+            else if (line.StartsWith(lineID))
+            {
+                match = true;
+            }
+        }
+        textStream.Close();
+        if (lines.Count > 0)
+        {
+            return (string[])lines.ToArray(typeof(string));
+        }
+        return new string[0];
+    }
+
+    public string GetLine(string id)
+    {
+        return GetLines(id)[0];
     }
 
     void Awake()
     {
-        //Singleton pattern
-        if (gameManager == null)
-        {
-            DontDestroyOnLoad(gameObject);
-            gameManager = this;
-        }
-        else if (gameManager != this)
-        {
-            Destroy(gameObject);
-        }
+      
     }
 
     // Update is called once per frame

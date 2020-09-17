@@ -1,0 +1,12 @@
+[player1LeftControlButton]
+A
+[player1JumpControlButton]
+W
+[player1ightControlButton]
+D
+[player2LeftControlButton]
+LeftArrow
+[player2JumpControlButton]
+UpArrow
+[player2RightControlButton]
+RightArrow
