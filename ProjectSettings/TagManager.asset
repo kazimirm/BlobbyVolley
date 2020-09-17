@@ -14,6 +14,7 @@ TagManager:
   - Ball1
   - GroundLeft
   - GroundRight
+  - player1LeftControlButton
   layers:
   - Default
   - TransparentFX

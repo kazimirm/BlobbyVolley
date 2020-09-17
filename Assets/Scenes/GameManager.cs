@@ -6,7 +6,10 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
+
     public static GameManager gameManager;
+
+
 
     public GameObject player1;
     public GameObject player2;
@@ -48,10 +51,23 @@ public class GameManager : MonoBehaviour {
         blobbyRight.GetComponent<Blobby>().right = KeyCode.RightArrow;
         blobbyRight.GetComponent<SpriteRenderer>().color = blobbyRightColor;
 ;
-
+        Transform settingsScreen = transform.Find("SettingsScreen");
         blobbyLeft.GetComponent<Blobby>().left = KeyCode.A;
         blobbyLeft.GetComponent<Blobby>().jump = KeyCode.W;
         blobbyLeft.GetComponent<Blobby>().right = KeyCode.D;
+        GameObject button1 = GameObject.FindGameObjectWithTag("player1LeftControlButton");
+        //Button button2 = GameObject.Find("player1UpControlButton").GetComponent<Button>();
+        //Button button3 = GameObject.Find("player1RightControlButton").GetComponent<Button>();
+        //button1.GetComponentInChildren<Text>().text = blobbyLeft.GetComponent<Blobby>().left.ToString();
+        //button2.GetComponentInChildren<Text>().text = blobbyLeft.GetComponent<Blobby>().jump.ToString();
+        //button3.GetComponentInChildren<Text>().text = blobbyLeft.GetComponent<Blobby>().right.ToString();
+        //GameObject.Find("player1LeftControlButton").GetComponentInChildren<Text>().text = blobbyLeft.GetComponent<Blobby>().left.ToString();
+        //GameObject.Find("player1LeftControlButton").GetComponentInChildren<Text>().text = blobbyLeft.GetComponent<Blobby>().left.ToString();
+        //GameObject.Find("player1LeftControlButton").GetComponentInChildren<Text>().text = blobbyLeft.GetComponent<Blobby>().left.ToString();
+
+        //GameObject.Find("player1LeftControlButton").GetComponentInChildren<Text>().text = blobbyLeft.GetComponent<Blobby>().left.ToString();
+        //GameObject.Find("player1UpControlButton").GetComponentInChildren<Text>().text = blobbyLeft.GetComponent<Blobby>().jump.ToString();
+        //GameObject.Find("player1RightControlButton").GetComponentInChildren<Text>().text = blobbyLeft.GetComponent<Blobby>().right.ToString();
         blobbyLeft.GetComponent<SpriteRenderer>().color = blobbyLeftColor;
     }
 
@@ -139,5 +155,5 @@ public class GameManager : MonoBehaviour {
         player2fault();
         Debug.Log(gameObject.name + "bum");     
     }
-   
+
 }
