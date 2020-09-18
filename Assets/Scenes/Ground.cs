@@ -2,10 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class zem : MonoBehaviour {
-
-	public static Logger LOGGER;
-
+public class Ground : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -22,5 +19,5 @@ public class zem : MonoBehaviour {
     }
 
 
-    }
+}
 
