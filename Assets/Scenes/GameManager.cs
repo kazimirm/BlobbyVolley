@@ -12,9 +12,6 @@ public class GameManager : MonoBehaviour {
     public GameObject player1;
     public GameObject player2;
 
-    Vector3 originalPos1;
-    Vector3 originalPos2;
-
     public int Player1Life;
     public int Player2Life;
 
