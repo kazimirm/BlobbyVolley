@@ -9,8 +9,6 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager gameManager;
 
-
-
     public GameObject player1;
     public GameObject player2;
 
@@ -37,9 +35,14 @@ public class GameManager : MonoBehaviour {
     public Color blobbyRightColor = Color.blue;
     public Color blobbyLeftColor = Color.red;
 
+    private string LEFT_BRACKET = "[";
+    private string RIGHT_BRACKET = "]";
+    public static string CONFIG = "config";
+
 
     // Use this for initialization
     void Start () {
+
         player1Wins.SetActive(false);
         player2Wins.SetActive(false);
 
@@ -63,21 +66,22 @@ public class GameManager : MonoBehaviour {
         Debug.Log("ID of line: " + id);
         ArrayList lines = new ArrayList();
         string line;
-        TextAsset textFile = (TextAsset)Resources.Load("English", typeof(TextAsset));
+        TextAsset textFile = (TextAsset)Resources.Load(CONFIG, typeof(TextAsset));
         System.IO.StringReader textStream = new System.IO.StringReader(textFile.text);
-        string lineID = "[" + id + "]";
+        string lineID = LEFT_BRACKET + id + RIGHT_BRACKET;
         bool match = false;
+
         while ((line = textStream.ReadLine()) != null)
         {
             if (match)
             {
-                if (line.StartsWith("["))
+                if (line.StartsWith(LEFT_BRACKET))
                 {
                     break;
                 }
                 if (line.Length > 0)
                 {
-                    Debug.Log("Read line: " + line);
+                    Debug.Log("Reading config line: " + line);
                     lines.Add(line);
                 }
             }

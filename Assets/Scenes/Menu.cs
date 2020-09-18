@@ -2,6 +2,7 @@
 using UnityEngine.SceneManagement;
 using System.Collections;
 using UnityEngine.UI;
+using System.Text;
 
 public class Menu : MonoBehaviour
 {
@@ -27,9 +28,28 @@ public class Menu : MonoBehaviour
     KeyCode newKey;
     bool waitingForKey;
 
+
+
     // Use this for initialization
     void Start()
     {
+        GameObject blobbyLeft = GameObject.FindGameObjectWithTag("BlobbyLeft");
+        GameObject blobbyRight = GameObject.FindGameObjectWithTag("BlobbyRight");
+
+
+        if (PlayerPrefs.HasKey(player1LeftControlButton.name))
+        { blobbyLeft.GetComponent<Blobby>().left = (KeyCode) System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString(player1LeftControlButton.name)); }
+        if (PlayerPrefs.HasKey(player1JumpControlButton.name))
+        { blobbyLeft.GetComponent<Blobby>().jump = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString(player1JumpControlButton.name)); }
+        if (PlayerPrefs.HasKey(player1RightControlButton.name))
+        { blobbyLeft.GetComponent<Blobby>().right = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString(player1RightControlButton.name)); }
+
+        if (PlayerPrefs.HasKey(player2LeftControlButton.name))
+        { blobbyRight.GetComponent<Blobby>().left = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString(player2LeftControlButton.name)); }
+        if (PlayerPrefs.HasKey(player2JumpControlButton.name))
+        { blobbyRight.GetComponent<Blobby>().jump = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString(player2JumpControlButton.name)); }
+        if (PlayerPrefs.HasKey(player2RightControlButton.name))
+        { blobbyRight.GetComponent<Blobby>().right = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString(player2RightControlButton.name)); }
 
     }
 
@@ -84,7 +104,7 @@ public class Menu : MonoBehaviour
     public void restartGame()
     {
         buttonHit.Play();
-        PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
         SceneManager.LoadScene(0);
         player1Wins.SetActive(false);
         player2Wins.SetActive(false);
@@ -196,36 +216,46 @@ public class Menu : MonoBehaviour
         yield return WaitForKey(); //Executes endlessly until user presses a key
         GameObject blobbyLeft = GameObject.FindGameObjectWithTag("BlobbyLeft");
         GameObject blobbyRight = GameObject.FindGameObjectWithTag("BlobbyRight");
-        switch (b)
+      
+
+        if (player1LeftControlButton.name == button.name) 
+        {
+            blobbyLeft.GetComponent<Blobby>().left = newKey;
+            PlayerPrefs.SetString(player1LeftControlButton.name, newKey.ToString());
+            GameObject.Find(b).GetComponentInChildren<Text>().text = newKey.ToString(); 
+        }
+        else if (player1JumpControlButton.name == button.name)
+        {
+            blobbyLeft.GetComponent<Blobby>().jump = newKey;
+            PlayerPrefs.SetString(player1JumpControlButton.name, newKey.ToString());
+            GameObject.Find(b).GetComponentInChildren<Text>().text = newKey.ToString();
+        }
+        else if(player1RightControlButton.name == button.name)
         {
 
-            case "player1LeftControlButton":
-                blobbyLeft.GetComponent<Blobby>().left = newKey;
-                GameObject.Find(b).GetComponentInChildren<Text>().text = newKey.ToString();
-                break;
-            case "player1JumpControlButton":
-                blobbyLeft.GetComponent<Blobby>().jump = newKey;
-                GameObject.Find(b).GetComponentInChildren<Text>().text = newKey.ToString();
-                break;
-            case "player1RightControlButton":
-                blobbyLeft.GetComponent<Blobby>().right = newKey;
-                GameObject.Find(b).GetComponentInChildren<Text>().text = newKey.ToString();
-                break;
-            case "player2LeftControlButton":
-                blobbyRight.GetComponent<Blobby>().left = newKey;
-                GameObject.Find(b).GetComponentInChildren<Text>().text = newKey.ToString();
-                break;
-            case "player2JumpControlButton":
-                blobbyRight.GetComponent<Blobby>().jump = newKey;
-                GameObject.Find(b).GetComponentInChildren<Text>().text = newKey.ToString();
-                break;
-            case "player2RightControlButton":
-                blobbyRight.GetComponent<Blobby>().right = newKey;
-                GameObject.Find(b).GetComponentInChildren<Text>().text = newKey.ToString();
-                break;
+            blobbyLeft.GetComponent<Blobby>().right = newKey;
+            PlayerPrefs.SetString(player1RightControlButton.name, newKey.ToString());
+            GameObject.Find(b).GetComponentInChildren<Text>().text = newKey.ToString();
+        }
+        else if(player2LeftControlButton.name == button.name)
+        {
+            blobbyRight.GetComponent<Blobby>().left = newKey;
+            PlayerPrefs.SetString(player2LeftControlButton.name, newKey.ToString());
+            GameObject.Find(b).GetComponentInChildren<Text>().text = newKey.ToString();
+        }
+        else if(player2JumpControlButton.name == button.name)
+        {
+            blobbyRight.GetComponent<Blobby>().jump = newKey;
+            PlayerPrefs.SetString(player2JumpControlButton.name, newKey.ToString());
+            GameObject.Find(b).GetComponentInChildren<Text>().text = newKey.ToString();
+        }
+        else if(player2RightControlButton.name == button.name)
+        {
+            blobbyRight.GetComponent<Blobby>().right = newKey;
+            PlayerPrefs.SetString(player2RightControlButton.name, newKey.ToString());
+            GameObject.Find(b).GetComponentInChildren<Text>().text = newKey.ToString();
         }
 
         yield return null;
     }
-
 }

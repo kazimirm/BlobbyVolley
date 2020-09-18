@@ -2,7 +2,7 @@
 A
 [player1JumpControlButton]
 W
-[player1ightControlButton]
+[player1RightControlButton]
 D
 [player2LeftControlButton]
 LeftArrow
