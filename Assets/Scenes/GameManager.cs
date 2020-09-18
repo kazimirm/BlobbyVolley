@@ -34,7 +34,8 @@ public class GameManager : MonoBehaviour {
 
     private string LEFT_BRACKET = "[";
     private string RIGHT_BRACKET = "]";
-    public static string CONFIG = "config";
+    private static string CONFIG = "config";
+    private Dictionary<string, string> keyCodes;
 
 
     // Use this for initialization
@@ -46,14 +47,36 @@ public class GameManager : MonoBehaviour {
         blobbyRight = GameObject.FindGameObjectWithTag("BlobbyRight");
         blobbyLeft = GameObject.FindGameObjectWithTag("BlobbyLeft");
 
-        blobbyRight.GetComponent<Blobby>().left = (KeyCode)System.Enum.Parse(typeof(KeyCode), GetLine("player2LeftControlButton"));
-        blobbyRight.GetComponent<Blobby>().jump = (KeyCode)System.Enum.Parse(typeof(KeyCode), GetLine("player2JumpControlButton"));
-        blobbyRight.GetComponent<Blobby>().right = (KeyCode)System.Enum.Parse(typeof(KeyCode), GetLine("player2RightControlButton"));
-        blobbyRight.GetComponent<SpriteRenderer>().color = blobbyRightColor;
+        keyCodes = new Dictionary<string, string>();
+        bool configOK = ParseInputConfig(CONFIG);
 
-        blobbyLeft.GetComponent<Blobby>().left = (KeyCode)System.Enum.Parse(typeof(KeyCode), GetLine("player1LeftControlButton"));
-        blobbyLeft.GetComponent<Blobby>().jump = (KeyCode)System.Enum.Parse(typeof(KeyCode), GetLine("player1JumpControlButton"));
-        blobbyLeft.GetComponent<Blobby>().right = (KeyCode)System.Enum.Parse(typeof(KeyCode), GetLine("player1RightControlButton"));
+        if (configOK) {
+            string key;
+            keyCodes.TryGetValue("player2LeftControlButton", out key);
+            blobbyRight.GetComponent<Blobby>().left = (KeyCode)System.Enum.Parse(typeof(KeyCode), key);
+            keyCodes.TryGetValue("player2JumpControlButton", out key);
+            blobbyRight.GetComponent<Blobby>().jump = (KeyCode)System.Enum.Parse(typeof(KeyCode), key);
+            keyCodes.TryGetValue("player2RightControlButton", out key);
+            blobbyRight.GetComponent<Blobby>().right = (KeyCode)System.Enum.Parse(typeof(KeyCode), key);
+
+            keyCodes.TryGetValue("player1LeftControlButton", out key);
+            blobbyLeft.GetComponent<Blobby>().left = (KeyCode)System.Enum.Parse(typeof(KeyCode), key);
+            keyCodes.TryGetValue("player1JumpControlButton", out key);
+            blobbyLeft.GetComponent<Blobby>().jump = (KeyCode)System.Enum.Parse(typeof(KeyCode), key);
+            keyCodes.TryGetValue("player1RightControlButton", out key);
+            blobbyLeft.GetComponent<Blobby>().right = (KeyCode)System.Enum.Parse(typeof(KeyCode), key);
+
+
+        }
+        //blobbyRight.GetComponent<Blobby>().left = (KeyCode)System.Enum.Parse(typeof(KeyCode), GetLine("player2LeftControlButton"));
+        //blobbyRight.GetComponent<Blobby>().jump = (KeyCode)System.Enum.Parse(typeof(KeyCode), GetLine("player2JumpControlButton"));
+        //blobbyRight.GetComponent<Blobby>().right = (KeyCode)System.Enum.Parse(typeof(KeyCode), GetLine("player2RightControlButton"));
+
+        //blobbyLeft.GetComponent<Blobby>().left = (KeyCode)System.Enum.Parse(typeof(KeyCode), GetLine("player1LeftControlButton"));
+        //blobbyLeft.GetComponent<Blobby>().jump = (KeyCode)System.Enum.Parse(typeof(KeyCode), GetLine("player1JumpControlButton"));
+        //blobbyLeft.GetComponent<Blobby>().right = (KeyCode)System.Enum.Parse(typeof(KeyCode), GetLine("player1RightControlButton"));
+
+        blobbyRight.GetComponent<SpriteRenderer>().color = blobbyRightColor;
         blobbyLeft.GetComponent<SpriteRenderer>().color = blobbyLeftColor;
         
     }
@@ -92,15 +115,77 @@ public class GameManager : MonoBehaviour {
         {
             return (string[])lines.ToArray(typeof(string));
         }
-        return new string[0];
+        else 
+        {
+            Debug.LogWarning("Line ID: " + LEFT_BRACKET + id + RIGHT_BRACKET + "could not be found. Make sure the config file is correct.");
+            return null;
+        }
     }
 
     public string GetLine(string id)
     {
-        return GetLines(id)[0];
+        string[] lines = GetLines(id);
+
+        if (lines == null)
+        {
+            return string.Empty;
+        }
+        else
+        {
+            return GetLines(id)[0];
+        }
     }
 
-    void Awake()
+    public bool ParseInputConfig(string configName)
+    {
+        Debug.Log("Parse of config: " + configName + "started.");
+        TextAsset textFile = (TextAsset)Resources.Load(configName, typeof(TextAsset));
+        System.IO.StringReader textStream = new System.IO.StringReader(textFile.text);
+        string line;
+
+        while ((line = textStream.ReadLine()) != null)
+        {
+
+            if (line.StartsWith(LEFT_BRACKET))
+            {
+                string key = FindStringInBetween(line, LEFT_BRACKET, RIGHT_BRACKET);
+
+                if ((line = textStream.ReadLine()) != null) 
+                {
+                    string value = line;
+                    keyCodes.Add(key, value);
+                }
+
+            }
+               
+        }
+        textStream.Close();
+
+        int count = keyCodes.Count;
+
+        if (count > 0) 
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    public string FindStringInBetween(string Text, string FirstString, string LastString)
+    {
+        string STR = Text;
+        string STRFirst = FirstString;
+        string STRLast = LastString;
+        string FinalString;
+
+        int Pos1 = STR.IndexOf(FirstString) + FirstString.Length;
+        int Pos2 = STR.IndexOf(LastString);
+
+        FinalString = STR.Substring(Pos1, Pos2 - Pos1);
+        return FinalString;
+    }
+
+void Awake()
     {
       
     }

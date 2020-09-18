@@ -36,7 +36,7 @@ public class Menu : MonoBehaviour
         GameObject blobbyLeft = GameObject.FindGameObjectWithTag("BlobbyLeft");
         GameObject blobbyRight = GameObject.FindGameObjectWithTag("BlobbyRight");
 
-
+        //Getting players control from PlayerPrefs if there are saved
         if (PlayerPrefs.HasKey(player1LeftControlButton.name))
         { 
             blobbyLeft.GetComponent<Blobby>().left = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString(player1LeftControlButton.name)); 
@@ -103,6 +103,7 @@ public class Menu : MonoBehaviour
     {
         buttonHit.Play();
         hideInGameButtons();
+
         menuScreen.SetActive(true);
         infoScreen.SetActive(true);
         settingsScreen.SetActive(false);
