@@ -39,7 +39,8 @@ public class GameManager : MonoBehaviour {
 
 
     // Use this for initialization
-    void Start () {
+    void Start() 
+    {
 
         player1Wins.SetActive(false);
         player2Wins.SetActive(false);
@@ -81,6 +82,10 @@ public class GameManager : MonoBehaviour {
         
     }
 
+
+    // Method for retrieving value from config value accroding to key. 
+    // For every field it reads whole file until succeeded. Thus not good but may be useful later.
+    // Rather use ParseInputConfig method instead
     public string[] GetLines(string id)
     {
         Debug.Log("ID of line: " + id);
@@ -136,6 +141,8 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+
+    // Method for getting all config fields at once, once when game starts.
     public bool ParseInputConfig(string configName)
     {
         Debug.Log("Parse of config: " + configName + "started.");
@@ -154,6 +161,7 @@ public class GameManager : MonoBehaviour {
                 {
                     string value = line;
                     keyCodes.Add(key, value);
+                    Debug.Log("Line ID: " + LEFT_BRACKET + key + RIGHT_BRACKET + "was successfully parsed with value: " + value);
                 }
 
             }
@@ -168,6 +176,7 @@ public class GameManager : MonoBehaviour {
             return true;
         }
 
+        Debug.LogWarning("Config file was not found or has zero fields.");
         return false;
     }
 
@@ -185,7 +194,7 @@ public class GameManager : MonoBehaviour {
         return FinalString;
     }
 
-void Awake()
+    void Awake()
     {
       
     }
@@ -197,6 +206,10 @@ void Awake()
 
 
     //Method for taking a player's 1 life
+    // For player to win there must be a 2 score difference
+    // so in case that both players have just on life, the point 
+    // will not be taken from the one who did the fault, 
+    // but will be added to the player who won.
     public void player1fault()
     {
         if (Player1Life == 1 && Player2Life == 1)
@@ -229,11 +242,12 @@ void Awake()
             win.Play();
             player1.SetActive(false);
             player2Wins.SetActive(true);
-            Debug.Log("Player2 wins");
+            Debug.Log("Player2 wins the game");
         }
 
     }
-    //Method for taking a player's 2 life
+
+    // Method for taking a player's 2 life.
     public void player2fault()
     {
         if (Player1Life == 1 && Player2Life == 1)
@@ -262,7 +276,7 @@ void Awake()
             win.Play();
             player2.SetActive(false);
             player1Wins.SetActive(true);
-            Debug.Log("Player1 wins");
+            Debug.Log("Player1 wins the game");
         }
         whistleSound.Play();
         smallapplaus.Play();

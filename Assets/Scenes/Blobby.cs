@@ -22,9 +22,9 @@ public class Blobby : MonoBehaviour {
     public AudioSource BlopSound;
 
     // Use this for initialization
-    void Start () {
+    void Start() 
+    {
         theRB = GetComponent<Rigidbody2D>();
-
 	}
 
     /* 
@@ -32,7 +32,8 @@ public class Blobby : MonoBehaviour {
      * Players movement is handled here
      * 
      */
-    void Update() {
+    void Update() 
+    {
         
         isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, whatIsGround);
         if (Time.timeScale != 0)
