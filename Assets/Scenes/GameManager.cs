@@ -199,7 +199,16 @@ void Awake()
     //Method for taking a player's 1 life
     public void player1fault()
     {
-        Player1Life -= 1;
+        if (Player1Life == 1 && Player2Life == 1)
+        {
+            Player2Life += 1;
+            player2Lifes[Player2Life - 1].SetActive(true);
+        }
+        else 
+        {
+            Player1Life -= 1;
+        }
+        
         for (int i = 0; i < player1Lifes.Length; i++)
         {
             if ( Player1Life > i)
@@ -227,7 +236,16 @@ void Awake()
     //Method for taking a player's 2 life
     public void player2fault()
     {
-        Player2Life -= 1;
+        if (Player1Life == 1 && Player2Life == 1)
+        {
+            Player1Life += 1;
+            player1Lifes[Player1Life - 1].SetActive(true);
+        }
+        else
+        {
+            Player2Life -= 1;
+        }
+
         for (int i = 0; i < player2Lifes.Length; i++)
         {
             if (Player2Life > i)

@@ -178,10 +178,9 @@ public class Menu : MonoBehaviour
 
     void OnGUI()
     {
-        /* keyEvent dictates what key user presses
-		 * using Event.current to detect the current
-		 * event
-		 */
+        // keyEvent dictates what key user presses
+		// using Event.current to detect the current
+		// event
         keyEvent = Event.current;
 
         //Executes if a button gets pressed and
@@ -194,7 +193,7 @@ public class Menu : MonoBehaviour
     }
 
     /* Buttons cannot call on Coroutines via OnClick().
-	 * Instead, we have it call startAssignment, which will
+	 * Thus we have to call it startAssignment which will
 	 * call a coroutine in this script instead, only if we
 	 * are not already waiting for a key to be pressed.
 	 */
@@ -211,18 +210,19 @@ public class Menu : MonoBehaviour
         buttonText = text;
     }
 
-    //Used for controlling the flow of our below Coroutine
+    //Used for controlling the flow of our Coroutine
     IEnumerator WaitForKey()
     {
         while (!keyEvent.isKey)
             yield return null;
     }
 
-    /*AssignKey takes a keyName as a parameter. The
-	 * keyName is checked in a switch statement. Each
-	 * case assigns the command that keyName represents
+    /* AssignKey takes a button as a parameter. The
+	 * button.name is checked in a multple if-then statement.
+     * Each case assigns the command that keyName represents
 	 * to the new key that the user presses, which is grabbed
-	 * in the OnGUI() function, above.
+	 * in the OnGUI() function and stored to PlayerPrefs so in
+     * case of game restart it can be reassigned.
 	 */
     public IEnumerator AssignKey(Button button)
     {
