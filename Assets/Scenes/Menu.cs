@@ -127,6 +127,7 @@ public class Menu : MonoBehaviour
 
     public void showGameScreen()
     {
+        Time.timeScale = 1;
         buttonHit.Play();
         showInGameButtons();
         menuScreen.SetActive(false);
@@ -142,6 +143,7 @@ public class Menu : MonoBehaviour
 
     public void pauseGame()
     {
+        Time.timeScale = 0;
         buttonHit.Play();
         showMenuScreen();
 
@@ -155,6 +157,7 @@ public class Menu : MonoBehaviour
 
     public void showSettings()
     {
+        Time.timeScale = 0;
         buttonHit.Play();
         hideInGameButtons();
         menuScreen.SetActive(true);
