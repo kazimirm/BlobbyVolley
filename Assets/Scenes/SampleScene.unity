@@ -880,6 +880,8 @@ MonoBehaviour:
   player2LeftControlButton: {fileID: 494344155}
   player2RightControlButton: {fileID: 2099247406}
   player2JumpControlButton: {fileID: 1727304295}
+  blobbyRightChangeColorButton: {fileID: 1707519369}
+  blobbyLeftChangeColorButton: {fileID: 1677669565}
 --- !u!114 &101429095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1285,6 +1287,8 @@ MonoBehaviour:
   player2LeftControlButton: {fileID: 494344155}
   player2RightControlButton: {fileID: 2099247406}
   player2JumpControlButton: {fileID: 1727304295}
+  blobbyRightChangeColorButton: {fileID: 1707519369}
+  blobbyLeftChangeColorButton: {fileID: 1677669565}
 --- !u!114 &163444621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1377,6 +1381,85 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 163444617}
+  m_CullTransparentMesh: 0
+--- !u!1 &190002608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 190002609}
+  - component: {fileID: 190002611}
+  - component: {fileID: 190002610}
+  m_Layer: 15
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &190002609
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190002608}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1707519370}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &190002610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190002608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Color
+--- !u!222 &190002611
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190002608}
   m_CullTransparentMesh: 0
 --- !u!1 &214791329
 GameObject:
@@ -1523,6 +1606,8 @@ MonoBehaviour:
   player2LeftControlButton: {fileID: 494344155}
   player2RightControlButton: {fileID: 2099247406}
   player2JumpControlButton: {fileID: 1727304295}
+  blobbyRightChangeColorButton: {fileID: 1707519369}
+  blobbyLeftChangeColorButton: {fileID: 1677669565}
 --- !u!114 &243738548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1837,6 +1922,8 @@ MonoBehaviour:
   player2LeftControlButton: {fileID: 494344155}
   player2RightControlButton: {fileID: 2099247406}
   player2JumpControlButton: {fileID: 1727304295}
+  blobbyRightChangeColorButton: {fileID: 1707519369}
+  blobbyLeftChangeColorButton: {fileID: 1677669565}
 --- !u!114 &337183992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2075,6 +2162,8 @@ MonoBehaviour:
   player2LeftControlButton: {fileID: 494344155}
   player2RightControlButton: {fileID: 2099247406}
   player2JumpControlButton: {fileID: 1727304295}
+  blobbyRightChangeColorButton: {fileID: 1707519369}
+  blobbyLeftChangeColorButton: {fileID: 1677669565}
 --- !u!114 &352276160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2317,6 +2406,8 @@ MonoBehaviour:
   player2LeftControlButton: {fileID: 494344155}
   player2RightControlButton: {fileID: 2099247406}
   player2JumpControlButton: {fileID: 1727304295}
+  blobbyRightChangeColorButton: {fileID: 1707519369}
+  blobbyLeftChangeColorButton: {fileID: 1677669565}
 --- !u!114 &378634626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2706,6 +2797,8 @@ MonoBehaviour:
   player2LeftControlButton: {fileID: 494344155}
   player2RightControlButton: {fileID: 2099247406}
   player2JumpControlButton: {fileID: 1727304295}
+  blobbyRightChangeColorButton: {fileID: 1707519369}
+  blobbyLeftChangeColorButton: {fileID: 1677669565}
 --- !u!114 &494344158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2905,6 +2998,87 @@ MonoBehaviour:
   player2LeftControlButton: {fileID: 494344155}
   player2RightControlButton: {fileID: 2099247406}
   player2JumpControlButton: {fileID: 1727304295}
+  blobbyRightChangeColorButton: {fileID: 1707519369}
+  blobbyLeftChangeColorButton: {fileID: 1677669565}
+--- !u!1 &510567477
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 510567478}
+  - component: {fileID: 510567480}
+  - component: {fileID: 510567479}
+  m_Layer: 15
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &510567478
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510567477}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1677669570}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &510567479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510567477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Color
+--- !u!222 &510567480
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510567477}
+  m_CullTransparentMesh: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3142,6 +3316,8 @@ MonoBehaviour:
   player2LeftControlButton: {fileID: 494344155}
   player2RightControlButton: {fileID: 2099247406}
   player2JumpControlButton: {fileID: 1727304295}
+  blobbyRightChangeColorButton: {fileID: 1707519369}
+  blobbyLeftChangeColorButton: {fileID: 1677669565}
 --- !u!114 &567682716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5226,6 +5402,8 @@ RectTransform:
   - {fileID: 494344156}
   - {fileID: 1727304296}
   - {fileID: 2099247407}
+  - {fileID: 1677669570}
+  - {fileID: 1707519370}
   m_Father: {fileID: 1724526464}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5298,6 +5476,8 @@ MonoBehaviour:
   player2LeftControlButton: {fileID: 494344155}
   player2RightControlButton: {fileID: 2099247406}
   player2JumpControlButton: {fileID: 1727304295}
+  blobbyRightChangeColorButton: {fileID: 1707519369}
+  blobbyLeftChangeColorButton: {fileID: 1677669565}
 --- !u!1 &1104804862
 GameObject:
   m_ObjectHideFlags: 0
@@ -6224,6 +6404,8 @@ MonoBehaviour:
   player2LeftControlButton: {fileID: 494344155}
   player2RightControlButton: {fileID: 2099247406}
   player2JumpControlButton: {fileID: 1727304295}
+  blobbyRightChangeColorButton: {fileID: 1707519369}
+  blobbyLeftChangeColorButton: {fileID: 1677669565}
 --- !u!114 &1440308726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6603,6 +6785,8 @@ MonoBehaviour:
   player2LeftControlButton: {fileID: 494344155}
   player2RightControlButton: {fileID: 2099247406}
   player2JumpControlButton: {fileID: 1727304295}
+  blobbyRightChangeColorButton: {fileID: 1707519369}
+  blobbyLeftChangeColorButton: {fileID: 1677669565}
 --- !u!1 &1466544106
 GameObject:
   m_ObjectHideFlags: 0
@@ -7308,6 +7492,167 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1676988543}
   m_CullTransparentMesh: 0
+--- !u!1 &1677669565
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1677669570}
+  - component: {fileID: 1677669569}
+  - component: {fileID: 1677669568}
+  - component: {fileID: 1677669567}
+  - component: {fileID: 1677669566}
+  m_Layer: 15
+  m_Name: blobbyLeftChangeColorButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1677669566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677669565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4543d83cccb9dc1499617556b38bf17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonHit: {fileID: 919451464}
+  menuScreen: {fileID: 1724526463}
+  infoScreen: {fileID: 496784758}
+  settingsScreen: {fileID: 1076368627}
+  pauseButton: {fileID: 1722863245}
+  restartButton: {fileID: 567682713}
+  player1Wins: {fileID: 293298123}
+  player2Wins: {fileID: 2044304182}
+  player1LeftControlButton: {fileID: 378634623}
+  player1RightControlButton: {fileID: 163444617}
+  player1JumpControlButton: {fileID: 1440308722}
+  player2LeftControlButton: {fileID: 494344155}
+  player2RightControlButton: {fileID: 2099247406}
+  player2JumpControlButton: {fileID: 1727304295}
+  blobbyRightChangeColorButton: {fileID: 1707519369}
+  blobbyLeftChangeColorButton: {fileID: 1677669565}
+--- !u!114 &1677669567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677669565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1677669568}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1677669566}
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: changeBlobbyColor
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1677669567}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+--- !u!114 &1677669568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677669565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 046ea49178256034c8dd9aa715e69270, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1677669569
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677669565}
+  m_CullTransparentMesh: 0
+--- !u!224 &1677669570
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677669565}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_Children:
+  - {fileID: 510567478}
+  m_Father: {fileID: 1076368628}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -116, y: 230.66}
+  m_SizeDelta: {x: 75, y: 89}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1695923253
 GameObject:
   m_ObjectHideFlags: 0
@@ -7382,6 +7727,167 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1695923253}
+  m_CullTransparentMesh: 0
+--- !u!1 &1707519369
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1707519370}
+  - component: {fileID: 1707519374}
+  - component: {fileID: 1707519373}
+  - component: {fileID: 1707519372}
+  - component: {fileID: 1707519371}
+  m_Layer: 15
+  m_Name: blobbyRightChangeColorButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1707519370
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707519369}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_Children:
+  - {fileID: 190002609}
+  m_Father: {fileID: 1076368628}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -115.9, y: 87}
+  m_SizeDelta: {x: 75, y: 89}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1707519371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707519369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4543d83cccb9dc1499617556b38bf17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonHit: {fileID: 919451464}
+  menuScreen: {fileID: 1724526463}
+  infoScreen: {fileID: 496784758}
+  settingsScreen: {fileID: 1076368627}
+  pauseButton: {fileID: 1722863245}
+  restartButton: {fileID: 567682713}
+  player1Wins: {fileID: 293298123}
+  player2Wins: {fileID: 2044304182}
+  player1LeftControlButton: {fileID: 378634623}
+  player1RightControlButton: {fileID: 163444617}
+  player1JumpControlButton: {fileID: 1440308722}
+  player2LeftControlButton: {fileID: 494344155}
+  player2RightControlButton: {fileID: 2099247406}
+  player2JumpControlButton: {fileID: 1727304295}
+  blobbyRightChangeColorButton: {fileID: 1707519369}
+  blobbyLeftChangeColorButton: {fileID: 1677669565}
+--- !u!114 &1707519372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707519369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1707519373}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1707519371}
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: changeBlobbyColor
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1707519372}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+--- !u!114 &1707519373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707519369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 046ea49178256034c8dd9aa715e69270, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1707519374
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707519369}
   m_CullTransparentMesh: 0
 --- !u!1 &1714781476
 GameObject:
@@ -7528,6 +8034,8 @@ MonoBehaviour:
   player2LeftControlButton: {fileID: 494344155}
   player2RightControlButton: {fileID: 2099247406}
   player2JumpControlButton: {fileID: 1727304295}
+  blobbyRightChangeColorButton: {fileID: 1707519369}
+  blobbyLeftChangeColorButton: {fileID: 1677669565}
 --- !u!114 &1722863248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7730,6 +8238,8 @@ MonoBehaviour:
   player2LeftControlButton: {fileID: 494344155}
   player2RightControlButton: {fileID: 2099247406}
   player2JumpControlButton: {fileID: 1727304295}
+  blobbyRightChangeColorButton: {fileID: 1707519369}
+  blobbyLeftChangeColorButton: {fileID: 1677669565}
 --- !u!1 &1727304295
 GameObject:
   m_ObjectHideFlags: 0
@@ -7797,6 +8307,8 @@ MonoBehaviour:
   player2LeftControlButton: {fileID: 494344155}
   player2RightControlButton: {fileID: 2099247406}
   player2JumpControlButton: {fileID: 1727304295}
+  blobbyRightChangeColorButton: {fileID: 1707519369}
+  blobbyLeftChangeColorButton: {fileID: 1677669565}
 --- !u!114 &1727304298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8035,6 +8547,8 @@ MonoBehaviour:
   player2LeftControlButton: {fileID: 494344155}
   player2RightControlButton: {fileID: 2099247406}
   player2JumpControlButton: {fileID: 1727304295}
+  blobbyRightChangeColorButton: {fileID: 1707519369}
+  blobbyLeftChangeColorButton: {fileID: 1677669565}
 --- !u!114 &1756782152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8818,6 +9332,8 @@ MonoBehaviour:
   player2LeftControlButton: {fileID: 494344155}
   player2RightControlButton: {fileID: 2099247406}
   player2JumpControlButton: {fileID: 1727304295}
+  blobbyRightChangeColorButton: {fileID: 1707519369}
+  blobbyLeftChangeColorButton: {fileID: 1677669565}
 --- !u!114 &2099247409
 MonoBehaviour:
   m_ObjectHideFlags: 0

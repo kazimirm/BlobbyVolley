@@ -22,6 +22,8 @@ public class Menu : MonoBehaviour
     public GameObject player2LeftControlButton;
     public GameObject player2RightControlButton;
     public GameObject player2JumpControlButton;
+    public GameObject blobbyRightChangeColorButton;
+    public GameObject blobbyLeftChangeColorButton;
 
     Event keyEvent;
     Text buttonText;
@@ -61,6 +63,14 @@ public class Menu : MonoBehaviour
         if (PlayerPrefs.HasKey(player2RightControlButton.name))
         { 
             blobbyRight.GetComponent<Blobby>().right = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString(player2RightControlButton.name)); 
+        }
+        if (PlayerPrefs.HasKey(blobbyRightChangeColorButton.name))
+        {
+            blobbyLeft.GetComponent<SpriteRenderer>().color = getSetColor(blobbyRightChangeColorButton.name);
+        }
+        if (PlayerPrefs.HasKey(blobbyLeftChangeColorButton.name))
+        {
+            blobbyLeft.GetComponent<SpriteRenderer>().color = getSetColor(blobbyLeftChangeColorButton.name);
         }
 
     }
@@ -164,6 +174,15 @@ public class Menu : MonoBehaviour
         menuScreen.SetActive(true);
         infoScreen.SetActive(false);
         settingsScreen.SetActive(true);
+
+        GameObject blobbyLeft = GameObject.FindGameObjectWithTag("BlobbyLeft");
+        GameObject blobbyRight = GameObject.FindGameObjectWithTag("BlobbyRight");
+        blobbyLeftChangeColorButton = GameObject.Find("blobbyLeftChangeColorButton");
+        blobbyRightChangeColorButton = GameObject.Find("blobbyRightChangeColorButton");
+
+        blobbyLeftChangeColorButton.GetComponent<Image>().color = blobbyLeft.GetComponent<SpriteRenderer>().color;
+        blobbyRightChangeColorButton.GetComponent<Image>().color = blobbyRight.GetComponent<SpriteRenderer>().color;
+
     }
 
     public void closeSettings()
@@ -226,7 +245,7 @@ public class Menu : MonoBehaviour
 	 */
     public IEnumerator AssignKey(Button button)
     {
-        string b = button.name;
+        string b  = button.name;
         waitingForKey = true;
 
         yield return WaitForKey(); //Executes endlessly until user presses a key
@@ -274,4 +293,56 @@ public class Menu : MonoBehaviour
 
         yield return null;
     }
+
+    public void changeBlobbyColor(Button button)
+    {
+        string b = button.name;
+        GameObject blobbyLeft = GameObject.FindGameObjectWithTag("BlobbyLeft");
+        GameObject blobbyRight = GameObject.FindGameObjectWithTag("BlobbyRight");
+
+        Color color = new Color(
+            Random.Range(0f, 1f),
+            Random.Range(0f, 1f),
+            Random.Range(0f, 1f)
+        );
+
+        if (blobbyRightChangeColorButton.name == button.name)
+        {
+            blobbyRightChangeColorButton.GetComponent<Image>().color = color;
+            blobbyRight.GetComponent<SpriteRenderer>().color = color;
+            setColor(blobbyRightChangeColorButton.name, color);
+        }
+        else if (blobbyLeftChangeColorButton.name == button.name)
+        {
+            blobbyLeftChangeColorButton.GetComponent<Image>().color = color;
+            blobbyLeft.GetComponent<SpriteRenderer>().color = color;
+            setColor(blobbyLeftChangeColorButton.name, color);
+        }
+    }
+
+    void setColor(string key, Color color)
+    {
+        PlayerPrefs.SetString(key, colorToHex(color));
+    }
+
+    Color getSetColor(string key)
+    {
+        return hexToColor(PlayerPrefs.GetString(key));
+    }
+
+    string colorToHex(Color32 color)
+    {
+        string hex = color.r.ToString("X2") + color.g.ToString("X2") + color.b.ToString("X2");
+        return hex;
+    }
+
+    Color hexToColor(string hex)
+    {
+        byte r = byte.Parse(hex.Substring(0, 2), System.Globalization.NumberStyles.HexNumber);
+        byte g = byte.Parse(hex.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
+        byte b = byte.Parse(hex.Substring(4, 2), System.Globalization.NumberStyles.HexNumber);
+        return new Color32(r, g, b, 255);
+    }
+
+
 }

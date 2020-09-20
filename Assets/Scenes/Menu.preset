@@ -81,4 +81,12 @@ Preset:
     propertyPath: player2JumpControlButton
     value: 
     objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: blobbyRightChangeColorButton
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: blobbyLeftChangeColorButton
+    value: 
+    objectReference: {fileID: 0}
   m_ExcludedProperties: []

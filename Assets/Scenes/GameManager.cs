@@ -50,9 +50,10 @@ public class GameManager : MonoBehaviour {
 
         keyCodes = new Dictionary<string, string>();
         bool configOK = ParseInputConfig(CONFIG);
+        string key;
 
         if (configOK) {
-            string key;
+            
             keyCodes.TryGetValue("player2LeftControlButton", out key);
             blobbyRight.GetComponent<Blobby>().left = (KeyCode)System.Enum.Parse(typeof(KeyCode), key);
             keyCodes.TryGetValue("player2JumpControlButton", out key);
