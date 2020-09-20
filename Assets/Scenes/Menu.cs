@@ -66,7 +66,7 @@ public class Menu : MonoBehaviour
         }
         if (PlayerPrefs.HasKey(blobbyRightChangeColorButton.name))
         {
-            blobbyLeft.GetComponent<SpriteRenderer>().color = getSetColor(blobbyRightChangeColorButton.name);
+            blobbyRight.GetComponent<SpriteRenderer>().color = getSetColor(blobbyRightChangeColorButton.name);
         }
         if (PlayerPrefs.HasKey(blobbyLeftChangeColorButton.name))
         {
