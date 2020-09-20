@@ -51,7 +51,6 @@ public class Menu : MonoBehaviour
         { 
             blobbyLeft.GetComponent<Blobby>().right = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString(player1RightControlButton.name)); 
         }
-
         if (PlayerPrefs.HasKey(player2LeftControlButton.name))
         { 
             blobbyRight.GetComponent<Blobby>().left = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString(player2LeftControlButton.name)); 
@@ -182,6 +181,14 @@ public class Menu : MonoBehaviour
 
         blobbyLeftChangeColorButton.GetComponent<Image>().color = blobbyLeft.GetComponent<SpriteRenderer>().color;
         blobbyRightChangeColorButton.GetComponent<Image>().color = blobbyRight.GetComponent<SpriteRenderer>().color;
+
+        GameObject.Find(player1LeftControlButton.name).GetComponentInChildren<Text>().text = blobbyLeft.GetComponent<Blobby>().left.ToString();
+        GameObject.Find(player1JumpControlButton.name).GetComponentInChildren<Text>().text = blobbyLeft.GetComponent<Blobby>().jump.ToString();
+        GameObject.Find(player1RightControlButton.name).GetComponentInChildren<Text>().text = blobbyLeft.GetComponent<Blobby>().right.ToString();
+
+        GameObject.Find(player2LeftControlButton.name).GetComponentInChildren<Text>().text = blobbyRight.GetComponent<Blobby>().left.ToString();
+        GameObject.Find(player2JumpControlButton.name).GetComponentInChildren<Text>().text = blobbyRight.GetComponent<Blobby>().jump.ToString();
+        GameObject.Find(player2RightControlButton.name).GetComponentInChildren<Text>().text = blobbyRight.GetComponent<Blobby>().right.ToString();
 
     }
 
